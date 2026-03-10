@@ -1,1 +1,5 @@
-
+name: CI Pipeline on Push
+on:
+  push:
+    branches:
+      - master # Specify the branch you want to monitor

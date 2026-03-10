@@ -3,3 +3,15 @@ on:
   push:
     branches:
       - master # Specify the branch you want to monitor
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # GitHub-hosted runner environment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Action to pull your code
+
+      - name: Install dependencies
+        run: npm install # Example command for a Node.js project
+
+      - name: Run tests
+        run: npm test # Example command to execute tests
